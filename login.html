@@ -1,118 +1,140 @@
 <HTML>
-<html>
-<head>
-  <title>Get Register</title>
-<style>
-.border {
-  background-color: lightblue;    
-  text-align: center;
-  width: 500px; height: 300px;
-  margin: 50px auto;
-  border: 10px solid #000000;
-}
- a{
-           background: #00AFAF;
-           border-colour: #000000;
-           border-style: solid;
-           colour: #fff;
-           font-size: 20px;
-           font-weight: bold;
-           letter-spacing: 2px;
-           height: 40px;
-           margin-top: 20px;
-}
-a:hover {
-  
-  background-color: yellow;
-  cursor: pointer;
-}
-body {
-  background-color: #E6A9EC;
-}
-</style>
-<style>
-    <h1 style="background-color:DodgerBlue;"></h1>
+  <html>
+  <head>
+    <title>Get Register</title>
+  <style>
+  .border {
+    background-color: lightblue;    
+    text-align: center;
+    width: 500px; height: 300px;
+    margin: 50px auto;
+    border: 10px solid #000000;
+  }
+   a{
+             background: #00AFAF;
+             border-colour: #000000;
+             border-style: solid;
+             colour: #fff;
+             font-size: 20px;
+             font-weight: bold;
+             letter-spacing: 2px;
+             height: 40px;
+             margin-top: 20px;
+  }
+  a:hover {
     
-</style>
-<style>
-   form .submit{
-           background: #347C2C;
-           border-colour: transparent;
-           border-radius: 10px;
-           colour: #fff;
-           font-size: 20px;
-           font-weight: bold;
-           letter-spacing: 2px;
-           height: 40px;
-           margin-top: 20px;
-}
-
-form .submit:hover {
+    background-color: yellow;
+    cursor: pointer;
+  }
+  radio:hover {
+    
+    cursor: pointer;
+  }
+  body {
+    background-color: #E6A9EC;
+  }
+  </style>
+  <style>
+      <h1 style="background-color:DodgerBlue;"></h1>
+      
+  </style>
+  <style>
+    form .login{
+             background: green;
+             border-colour: transparent;
+             border-radius: 10px;
+             colour: #fff;
+             font-size: 20px;
+             font-weight: bold;
+             letter-spacing: 2px;
+             height: 40px;
+             margin-top: 20px;
+  }
+  form .login:hover{
+    background-color: darkkhaki;
+    cursor: pointer;
+  }
+    </style>
+  <style>
+     form .submit{
+             background: #347C2C;
+             border-colour: transparent;
+             border-radius: 10px;
+             colour: #fff;
+             font-size: 20px;
+             font-weight: bold;
+             letter-spacing: 2px;
+             height: 40px;
+             margin-top: 20px;
+  }
   
-  background-color: #12AD2B;
-  cursor: pointer;
-}
-</style>
-<style>
-  h1{
-           background: #1F45FC;
-           border-colour: transparent;
-           colour: #fff;
-           height: 40px;
-           margin-top: 20px;
-}
-</style>
-</head>
-<body>
- <center>
-<div class="border">
-<div class="heading">
-<h1> Register </h1></div>
- <form>
-  <table style="float:center">
-    <tr>
-    <td>Full Name :</td>
-    <td>
-     <select>
-      <option>Mr</option>
-      <option>Mrs</option>
-     </select>
-     <input type="text" placeholder="Your Name">
-    </td>
-   </tr>
-   <tr>
-    <td>Username :</td>
-    <td><input type="text" placeholder="Your Username"></td>
-   </tr>
-   <tr>
-    <td>Password :</td>
-    <td><input type="password" placeholder="Type password"></td>
-   </tr>
-   <tr>
-    <td>Conform it :</td>
-    <td><input type="password" placeholder="conform password"></td>
-   </tr>
-   <tr>
-    <td>Gender :</td>
-   <td>
-      <input type="radio" name="gender">Male</input>
-      <input type="radio" name="gender">Female</input>
-      <input type="radio" name="gender">Rather not to say</input>
-    </td>
-   </tr>
-   <tr>
-    <td>Email :</td>
-    <td><input type="email" placeholder="your e-mail"></td>
-   </tr>
-   <tr>
-    <td></td>
-    <td><input type="submit" class="form-control submit" value="Register"></td>
-    <td></td>
-   </tr>
-  </table>
- </form>
-<h2>
-  <a href="index.html"> Go back to home </a></div></h2>
-</center>
-</body>
-</html>
+  form .submit:hover {
+    
+    background-color: #12AD2B;
+    cursor: pointer;
+  }
+  </style>
+  <style>
+    h1{
+             background: #1F45FC;
+             border-colour: transparent;
+             colour: #fff;
+             height: 50px;
+             margin-top: 10px;
+  }
+  </style>
+  </head>
+  <body>
+   <center>
+  <div class="border">
+  <div class="heading">
+  <h1> Register </h1></div>
+   <form>
+    <table style="float:center">
+      <tr>
+      <td>Full Name :</td>
+      <td>
+       <select>
+        <option>Mr</option>
+        <option>Mrs</option>
+       </select>
+       <input type="text" placeholder="Your Name">
+      </td>
+     </tr>
+     <tr>
+      <td>Username :</td>
+      <td><input type="text" placeholder="Your Username"></td>
+     </tr>
+     <tr>
+      <td>Password :</td>
+      <td><input type="password" placeholder="Type password"></td>
+     </tr>
+     <tr>
+      <td>Conform it :</td>
+      <td><input type="password" placeholder="conform password"></td>
+     </tr>
+     <tr>
+      <td>Gender :</td>
+  <div class="radio">
+     <td>
+        <input type="radio" name="gender">Male</input>
+        <input type="radio" name="gender">Female</input>
+        <input type="radio" name="gender">Rather not to say</input>
+      </td></div>
+     </tr>
+     <tr>
+      <td>Email :</td>
+      <td><input type="email" placeholder="your e-mail"></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td><input type="submit" class="form-control submit" value="Register"></td>
+      <td><input type="submit" class="form-control login" value="Login"></td>
+     </tr>
+    </table>
+   </form>
+  <h2>
+    <a href="index.html"> Go back to home </a></div></h2>
+  </center>
+  </body>
+  </html>
