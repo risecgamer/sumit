@@ -7,13 +7,13 @@
   .border {
     background-color: lightblue;    
     text-align: center;
-    width: 450px; height: 300px;
+    width: 380px; height: 300px;
     margin: 50px auto;
     border: 10px solid #000000;
   }
    a{
              background: #00AFAF;
-             border-colour: #000000;
+             border-color: #000000;
              border-style: solid;
              colour: #fff;
              font-size: 20px;
@@ -36,32 +36,20 @@
   }
   </style>
   <style>
-      <h1 style="background-color:DodgerBlue;"></h1>
-      
+      h1{
+                 background-color:DodgerBlue;
+                 border-radius: 50px;
+                 height: 50px;
+                 width: 180px;
+                 text-align: center; 
+                 border-color: black;  
+}
   </style>
-  <style>
-    form .login{
-             background: green;
-             border-colour: transparent;
-             border-radius: 10px;
-             colour: #fff;
-             font-size: 20px;
-             font-weight: bold;
-             letter-spacing: 2px;
-             height: 40px;
-             margin-top: 20px;
-  }
-  form .login:hover{
-    background-color: darkkhaki;
-    cursor: pointer;
-  }
-    </style>
   <style>
      form .submit{
              background: #347C2C;
-             border-colour: transparent;
+             border-color: transparent;
              border-radius: 10px;
-             colour: #fff;
              font-size: 20px;
              font-weight: bold;
              letter-spacing: 2px;
@@ -71,7 +59,10 @@
   
   form .submit:hover {
     
-    background-color: #12AD2B;
+    background-color: cyan;
+    border-color: darkgreen;
+    border-size: 5px;
+    color: black;
     cursor: pointer;
   }
   </style>
@@ -89,8 +80,8 @@
    <center>
   <div class="border">
   <div class="heading">
-  <h1> Register </h1></div>
-   <form>
+  <center><h1> Register </h1></center></div>
+   <form method="post" class="contact-form">
     <table style="float:center">
       <tr>
       <td>Full Name :</td>
@@ -99,16 +90,16 @@
         <option>Mr</option>
         <option>Mrs</option>
        </select>
-       <input type="text" placeholder="Your Name">
+       <input type="text" class="name" placeholder="Your Name" required>
       </td>
      </tr>
      <tr>
       <td>Username :</td>
-      <td><input type="text" placeholder="Your Username"></td>
+      <td><input type="text" class="username" placeholder="Your Username" required></td>
      </tr>
      <tr>
       <td>Password :</td>
-      <td><input type="password" placeholder="Type password"></td>
+      <td><input type="password" class="password" placeholder="Type password" required></td>
      </tr>
      <tr>
       <td>Conform it :</td>
@@ -118,19 +109,19 @@
       <td>Gender :</td>
   <div class="radio">
      <td>
-        <input type="radio" name="gender">Male</input>
-        <input type="radio" name="gender">Female</input>
-        <input type="radio" name="gender">Rather not to say</input>
+        <input type="radio" class="gender" name="gender">Male</input>
+        <input type="radio" class="gender" name="gender">Female</input>
+        <input type="radio" class="gender" name="gender">Rather not to say</input>
       </td></div>
      </tr>
      <tr>
       <td>Email :</td>
-      <td><input type="email" placeholder="your e-mail"></td>
+      <td><input type="email" class="email" placeholder="your e-mail" required></td>
      </tr>
      <tr>
       <td></td>
       <td><input type="submit" class="form-control submit" value="Register"></td>
-      <td><input type="submit" class="form-control login" value="Login"></td>
+      <td></td>
      </tr>
     </table>
    </form>
@@ -138,4 +129,43 @@
     <a href="index.html"> Go back to home </a></div></h2>
   </center>
   </body>
+<script src=
+    "https://smtpjs.com/v3/smtp.js">
+  </script>
+
+<script>
+    const form = document.querySelector(".contact-form");
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    let name = document.querySelector(".name").value;
+    let username = document.querySelector(".username").value;
+    let password = document.querySelector(".password").value;
+    let gender = document.querySelector(".gender").value;
+    let email = document.querySelector(".email").value;
+    
+
+
+    document.querySelector(".contact-form").reset();
+
+    sendEmail(name, username, password, gender, email);
+  })
+  function sendEmail(name, username, password, gender, email){
+    Email.send({
+        
+      Host: "smtp.elasticemail.com", 
+      Username: "kinemasteropp14@gmail.com",
+      Password: "E30DD994A185A801C894FAFE6D5F584D68E2",
+      To: "prayashopp@gmail.com",
+      From: "kinemasteropp14@gmail.com",
+      Subject: `${name} Just messaged you from the website form`,
+      Body: `Name: ${name} <br> username: ${username} <br> password: ${password} <br> gender: ${gender} <br> Email: ${email} <br>`,
+    }).then((success) => {
+     
+      alert("You have been sucessfully registered to our Webside.");
+    }).catch((error) => {
+        
+      alert("Error while registering. make sure you fill blanks.");
+    })
+  }
+</script>
   </html>
